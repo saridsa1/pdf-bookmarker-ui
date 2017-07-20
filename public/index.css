@@ -1,0 +1,149 @@
+html {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family:Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+    -webkit-font-smoothing:antialiased;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.inputfile + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    display: inline-block;
+}
+
+.ComponentPage-doSection h3::after {
+    background-color: #a4cf0c;
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 8px;
+    margin: 12px 0;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: red;
+}
+
+.badge {
+    font-size: .32em;
+    /* font-style: italic; */
+    display: block;
+    position: absolute;
+    top: -0.65em;
+    right: -1.5em;
+    width: 2.5em;
+    height: 2em;
+    line-height: 2em;
+    border-radius: 20%;
+    text-align: center;
+    font-family: Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+    color: #0078d7;
+    background: #FAFAFA;
+}
+.ms-CalloutExample-callout {
+    max-width: 400px;
+    width: 390px;
+}
+.ms-CalloutExample-configArea {
+    min-width: 350px;
+    display: inline-block
+}
+.ms-CalloutExample-title {
+    font-size: large;
+    float: left
+}
+.ms-CalloutExample-inner {
+    max-height: 300px;
+    height: 100%;
+    padding-top: 0;
+    padding-right: 24px;
+    padding-left: 24px;
+    padding-bottom: 20px;
+}
+.ms-CalloutExample-header {
+    padding: 18px 24px 12px;
+    height: 20px;
+}
+.ms-CalloutExample-title {
+    margin: 0;
+    font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 18px;
+    font-weight: 200;
+    color: #333333;
+}
+.ms-CalloutExample-subText {
+    margin: 0;
+    font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 15px;
+    font-weight: 100;
+    color: #333333;
+    padding-bottom: 3px;
+    float: left;
+    width: 92%
+}
+
+.ms-CalloutExample-link {
+    font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333333
+}
+
+.notification-name-link{
+    float: left;
+    -webkit-margin-after: .5em;
+    -webkit-margin-before: .5em;
+}
+.notification-delete-link{
+    float: right;
+    -webkit-margin-after: .5em;
+    -webkit-margin-before: .5em;
+}
+.ms-dialogMainOverride{
+    max-width:550px!important;
+    min-width: 546px!important;
+}
+
+.scrollDetailsList {
+    overflow-y: scroll;
+    max-height: 400px;
+}
+.scrollDetailsList .ms-DetailsHeader{
+    min-width: 96%;
+}
+
+.ms-CalloutExample-callout > .ms-Callout-main {
+    padding-bottom: 10px;
+}
+
+.html-center-align {
+    top: 45%;
+    left: 45%;
+    position: absolute !important;
+}
+
+.pull-right {
+    float: right;
+}
+.menu-spacing{
+    padding-left: 15px;
+}
