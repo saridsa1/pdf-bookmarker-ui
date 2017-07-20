@@ -37,18 +37,29 @@ class App extends Component {
             textCriteria: "",
             _simpleSearchTerms: simpleSearchTerms,
             _compoundSearchTerms: compoundSearchTerms,
-            _selectedOption: {}
+            _selectedOption: {
+                "key" : "",
+                "value": ""
+            },
+            _selectedOptionValue : ""
         }
 
     }
     addSearchTerm(searchType){
-        var selectedValue = (searchType === "Compound") ? (this.state._compoundSearchMap[this.state._selectedOption.text]).join(',') : this.state._selectedOption.text;
-        var valueToSet = (this.state.textCriteria === "") ? selectedValue : this.state.textCriteria.concat(",").concat(selectedValue);
-        console.log("In the add search term ", searchType, valueToSet);
+        if(this.state._selectedOption.text){
+            var selectedValue = (searchType === "Compound") ? (this.state._compoundSearchMap[this.state._selectedOption.text]).join(',') : this.state._selectedOption.text;
+            var valueToSet = (this.state.textCriteria === "") ? selectedValue : this.state.textCriteria.concat(",").concat(selectedValue);
+            console.log("In the add search term ", searchType, valueToSet);
 
-        this.setState({
-            textCriteria: valueToSet
-        })
+            this.setState({
+                textCriteria: valueToSet,
+                _selectedOption: {
+                    "key": "",
+                    "value": ""
+                },
+                _selectedOptionValue: ""
+            })
+        }
     }
     _onCriteriaChanged(option)
     {
@@ -96,6 +107,7 @@ class App extends Component {
                                   autoComplete={ true }
                                   options={ this.state._simpleSearchTerms }
                                   onChanged={ this._onCriteriaChanged.bind(this) }
+                                  value = {this.state._selectedOptionValue}
                               />
                               <CompoundButton description='Add this term to search criteria' disabled={ false } onClick={this.addSearchTerm.bind(this, "Simple")}>
                                   Add term
@@ -112,6 +124,7 @@ class App extends Component {
                                   autoComplete={ true }
                                   options={ this.state._compoundSearchTerms }
                                   onChanged={ this._onCriteriaChanged.bind(this) }
+                                  value = {this.state._selectedOptionValue}
                               />
                               <CompoundButton description='Add this term to search criteria' disabled={ false } onClick={this.addSearchTerm.bind(this, "Compound")}>
                                   Add term
